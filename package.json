@@ -1,0 +1,10 @@
+{
+  "name": "extension-testing-example",
+  "version": "1.0",
+  "description": "Example extension on how to unit test browser extensions",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.0.0",
+    "webpack-cli": "^2.0.14"
+  }
+}
