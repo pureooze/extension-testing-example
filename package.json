@@ -2,8 +2,14 @@
   "name": "extension-testing-example",
   "version": "1.0",
   "description": "Example extension on how to unit test browser extensions",
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
   "license": "MIT",
   "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "copy-webpack-plugin": "^4.5.1",
+    "html-loader": "^0.5.5",
     "webpack": "^4.0.0",
     "webpack-cli": "^2.0.14"
   }
