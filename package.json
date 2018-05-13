@@ -1,0 +1,24 @@
+{
+  "name": "extension-testing-example",
+  "version": "1.0",
+  "description": "Example extension on how to unit test browser extensions",
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "test": "karma start karma.conf.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "copy-webpack-plugin": "^4.5.1",
+    "html-loader": "^0.5.5",
+    "jasmine": "^3.1.0",
+    "karma": "^2.0.2",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2",
+    "karma-spec-reporter": "^0.0.32",
+    "karma-webpack": "^3.0.0",
+    "sinon-chrome": "^2.3.2",
+    "webpack": "^4.0.0",
+    "webpack-cli": "^2.0.14"
+  }
+}

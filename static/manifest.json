@@ -1,0 +1,14 @@
+{
+  "name": "Extension testing example",
+  "version": "1.0",
+  "description": "Example extension on how to unit test browser extensions",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup-content.html"
+  },
+  "manifest_version": 2
+}
