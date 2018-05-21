@@ -16,6 +16,6 @@ export default function() {
   };
 }
 
-export function getTabTitle() {
-  return true;
+export async function getUrl() {
+  return browser.runtime.getURL("popup-content.html");
 }
