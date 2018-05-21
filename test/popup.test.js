@@ -1,24 +1,25 @@
-const chrome = require("sinon-chrome/extensions");
+const browser = require("sinon-chrome/webextensions");
 
-import { getTabTitle } from "src/popup.js";
+import { getUrl } from "src/popup.js";
 
 describe("popup.js ", () => {
   beforeAll(() => {
-    global.chrome = chrome;
+    global.browser = browser;
   });
 
   beforeEach(() => {
-    chrome.flush();
+    browser.flush();
   });
 
   describe("getTabTitle ", () => {
-    it("should return false when URL is empty", () => {
-      expect(getTabTitle()).toBe(true);
+    it("should return false when URL is empty", async () => {
+      browser.runtime.getURL.returns("http://localhost/popup-content.html");
+      expect(await getUrl()).toBe("http://localhost/popup-content.html");
     });
   });
 
   afterAll(() => {
-    chrome.flush();
-    delete global.chrome;
+    browser.flush();
+    delete global.browser;
   });
 });
