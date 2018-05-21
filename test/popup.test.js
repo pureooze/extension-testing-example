@@ -12,7 +12,7 @@ describe("popup.js ", () => {
   });
 
   describe("getTabTitle ", () => {
-    it("should return false when URL is empty", async () => {
+    it("should return full runtime URL", async () => {
       browser.runtime.getURL.returns("http://localhost/popup-content.html");
       expect(await getUrl()).toBe("http://localhost/popup-content.html");
     });
