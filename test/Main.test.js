@@ -1,4 +1,3 @@
-const browser = require("sinon-chrome/webextensions");
 import Main from "src/example/index.jsx";
 import { render } from "preact-render-spy";
 import { h } from "preact";
@@ -12,10 +11,10 @@ describe("SearchBar component ", () => {
     browser.flush();
   });
 
-  it("should be empty when no there is no search string provided", () => {
+  it("should rendered", () => {
     const props = {};
 
-    const searchBarRender = render(<Main {...props} />);
+    const mainComponentRender = render(<Main {...props} />);
   });
 
   afterAll(() => {
