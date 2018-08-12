@@ -7,9 +7,5 @@ describe("SearchBar component ", () => {
     const props = {};
 
     const searchBarRender = render(<Main {...props} />);
-    const searchInput = searchBarRender.find("#search-bar");
-
-    expect(searchInput.attr("value")).toBe("");
-    expect(searchInput.attr("placeholder")).toBe("Tabs");
   });
 });
