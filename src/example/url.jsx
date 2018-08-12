@@ -17,8 +17,6 @@ export default class Url extends Component {
   }
 
   render() {
-    chrome.extension.getBackgroundPage().console.log(this.state.site);
-
     return <b>{this.state.site}</b>;
   }
 }
