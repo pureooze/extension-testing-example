@@ -1,25 +1,25 @@
-const browser = require("sinon-chrome/webextensions");
+const chrome = require("sinon-chrome/extensions");
 
 import { getUrl } from "src/popup.js";
 
 describe("popup.js ", () => {
   beforeAll(() => {
-    global.browser = browser;
+    global.chrome = chrome;
   });
 
   beforeEach(() => {
-    browser.flush();
+    chrome.flush();
   });
 
   describe("getTabTitle ", () => {
     it("should return full runtime URL", async () => {
-      browser.runtime.getURL.returns("http://localhost/popup-content.html");
+      chrome.runtime.getURL.returns("http://localhost/popup-content.html");
       expect(await getUrl()).toBe("http://localhost/popup-content.html");
     });
   });
 
   afterAll(() => {
-    browser.flush();
-    delete global.browser;
+    chrome.flush();
+    delete global.chrome;
   });
 });

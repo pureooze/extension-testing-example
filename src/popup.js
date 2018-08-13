@@ -2,7 +2,6 @@ import { render, h } from "preact";
 import Main from "./example/index.jsx";
 
 export async function getUrl() {
-  chrome.extension.getBackgroundPage().console.log("testing");
   return chrome.runtime.getURL("popup-content.html");
 }
 
