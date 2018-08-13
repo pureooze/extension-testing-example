@@ -1,6 +1,6 @@
-import { Component, h } from "preact";
+import React from "react";
 
-export default class Url extends Component {
+export default class Url extends React.Component {
   constructor(props) {
     super(props);
 
@@ -8,8 +8,6 @@ export default class Url extends Component {
     this.state = {
       site: "aa"
     };
-
-    this.onClick = this.onClick.bind(this);
   }
 
   async componentWillMount() {
@@ -26,6 +24,7 @@ export default class Url extends Component {
       site: "clicked"
     });
   }
+
   render() {
     console.log("Render: ", this.state.site);
     return (
@@ -35,7 +34,7 @@ export default class Url extends Component {
           this.handleClick();
         }}
       >
-        {this.state.site}
+        a
       </div>
     );
   }

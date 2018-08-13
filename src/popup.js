@@ -1,4 +1,4 @@
-import { render, h } from "preact";
+import React from "react";
 import Main from "./example/index.jsx";
 
 export async function getUrl() {

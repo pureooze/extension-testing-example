@@ -1,7 +1,13 @@
 {
-  "sourceMaps": true,
+  "presets": [
+    "env",
+    "react",
+    "stage-0"
+  ],
   "plugins": [
-    ["transform-react-jsx", { "pragma": "h" }],
-    ["transform-class-properties"]
+    "transform-class-properties",
+    "transform-decorators",
+    "transform-react-constant-elements",
+    "transform-react-inline-elements"
   ]
 }

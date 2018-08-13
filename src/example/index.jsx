@@ -1,7 +1,7 @@
-import { Component, h } from "preact";
+import React from "react";
 import Url from "./url.jsx";
 
-export default class Main extends Component {
+export default class Main extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -27,8 +27,10 @@ export default class Main extends Component {
     return (
       <div>
         <button id="changeColor" onClick={this.handleClick} />
-        <Url getTopSites={this.props.getTopSites} />
       </div>
     );
   }
+}
+{
+  /* <Url getTopSites={this.props.getTopSites} /> */
 }
