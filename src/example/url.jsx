@@ -6,7 +6,7 @@ export default class Url extends React.Component {
 
     console.log("Constructing");
     this.state = {
-      site: "aa"
+      site: "aaasd"
     };
   }
 
@@ -34,7 +34,7 @@ export default class Url extends React.Component {
           this.handleClick();
         }}
       >
-        a
+        {this.state.site}
       </div>
     );
   }

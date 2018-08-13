@@ -18,6 +18,7 @@
     "copy-webpack-plugin": "^4.5.1",
     "enzyme": "^3.4.1",
     "enzyme-adapter-preact": "^0.2.0",
+    "enzyme-to-json": "^3.3.4",
     "html-loader": "^0.5.5",
     "jasmine": "^3.1.0",
     "jasmine-enzyme": "^6.0.3",
