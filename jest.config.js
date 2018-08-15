@@ -6,5 +6,8 @@ module.exports = {
       "<rootDir>/node_modules/preact-test-utils/lib/index.js",
     "^react$": "<rootDir>/node_modules/preact-compat-enzyme/lib/index.js",
     "^react-dom$": "<rootDir>/node_modules/preact-compat-enzyme/lib/index.js"
+  },
+  transform: {
+    "^.+\\.jsx?$": "<rootDir>/jest.transform.js"
   }
 };

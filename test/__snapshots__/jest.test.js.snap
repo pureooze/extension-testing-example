@@ -1,3 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render 1`] = `<undefined />`;
+exports[`should allow clicking button  1`] = `
+<button
+  id="changeColor"
+>
+  Click Button
+</button>
+`;
+
+exports[`should allow clicking button  2`] = `
+<div>
+  <div>
+    <button
+      id="changeColor"
+    >
+      Clicked!
+    </button>
+    <div
+      id="site-label"
+    >
+      http://localhost/popup-content.html
+    </div>
+  </div>
+</div>
+`;

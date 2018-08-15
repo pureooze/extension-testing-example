@@ -1,4 +1,4 @@
-import React from "react";
+import { render, h } from "preact";
 import Main from "./example/index.jsx";
 
 export async function getUrl() {
@@ -14,4 +14,4 @@ async function getTopSites() {
   return result;
 }
 
-render(<Main getTopSites={getUrl} />, document.body);
+render(<Main getUrl={getUrl} />, document.body);

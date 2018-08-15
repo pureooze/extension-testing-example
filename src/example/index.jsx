@@ -1,9 +1,13 @@
-import React from "react";
+import { Component, h } from "preact";
 import Url from "./url.jsx";
 
-export default class Main extends React.Component {
+export default class Main extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      text: "Click Button"
+    };
   }
 
   componentDidMount = () => {
@@ -16,6 +20,10 @@ export default class Main extends React.Component {
 
   handleClick = () => {
     let color = "fafafa";
+    console.log("Click?");
+    this.setState({
+      text: "Clicked!"
+    });
     chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
       chrome.tabs.executeScript(tabs[0].id, {
         code: 'document.body.style.backgroundColor = "' + color + '";'
@@ -26,8 +34,10 @@ export default class Main extends React.Component {
   render() {
     return (
       <div>
-        <button id="changeColor" onClick={this.handleClick} />
-        <Url getTopSites={this.props.getTopSites} />
+        <button id="changeColor" onClick={this.handleClick}>
+          {this.state.text}
+        </button>
+        <Url getUrl={this.props.getUrl} />
       </div>
     );
   }

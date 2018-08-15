@@ -6,9 +6,8 @@ module.exports = function webpackConfig() {
   const config = {
     resolve: {
       alias: {
-        "react-dom/server": "preact-render-to-string",
-        react: "preact-compat",
-        "react-dom": "preact-compat",
+        react: "preact-compat-enzyme",
+        "react-dom": "preact-compat-enzyme",
         src: path.join(__dirname, "src")
       },
       modules: ["./src", "./node_modules"]
