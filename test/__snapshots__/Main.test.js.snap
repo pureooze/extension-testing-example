@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Main component 1`] = `
+<div>
+  <div>
+    <button
+      id="changeColor"
+    />
+    <b>
+      
+    </b>
+    ;
+  </div>
+</div>
+`;
