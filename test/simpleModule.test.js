@@ -1,4 +1,4 @@
-import sum from "src/simpleModule.js";
+import sum from "@/simpleModule.js";
 
 describe("simpleModule.js ", () => {
   describe("sum ", () => {
