@@ -6,8 +6,8 @@ export default class Url extends Component {
       site: ""
     };
   }
-  async componentWillMount() {
-    const site = await this.props.getTopSites();
+  componentWillMount() {
+    const site = this.props.getUrl();
     this.setState({
       site
     });

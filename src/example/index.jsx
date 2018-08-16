@@ -23,7 +23,7 @@ export default class Main extends Component {
     return (
       <div>
         <button id="changeColor" onClick={this.handleClick} />
-        <Url getTopSites={this.props.getTopSites} />;
+        <Url getUrl={this.props.getUrl} />;
       </div>
     );
   }

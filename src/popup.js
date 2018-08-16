@@ -15,4 +15,4 @@ async function getTopSites() {
   return result;
 }
 
-render(<Main getTopSites={getUrl} />, document.body);
+render(<Main getUrl={getUrl} />, document.body);

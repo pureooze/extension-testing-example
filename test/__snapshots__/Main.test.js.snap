@@ -7,7 +7,7 @@ exports[`should render Main component 1`] = `
       id="changeColor"
     />
     <b>
-      
+      http://localhost:1234/index.html
     </b>
     ;
   </div>
