@@ -1,21 +1,18 @@
-export default function() {
-  let changeColor = document.getElementById("changeColor");
-
-  chrome.storage.sync.get("color", function(data) {
-    changeColor.style.backgroundColor = data.color;
-    changeColor.setAttribute("value", data.color);
-  });
-
-  changeColor.onclick = function(element) {
-    let color = element.target.value;
-    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-      chrome.tabs.executeScript(tabs[0].id, {
-        code: 'document.body.style.backgroundColor = "' + color + '";'
-      });
-    });
-  };
-}
+import { render, h } from "preact";
+import Main from "./example/index.jsx";
 
 export async function getUrl() {
-  return browser.runtime.getURL("popup-content.html");
+  chrome.extension.getBackgroundPage().console.log("testing");
+  return chrome.runtime.getURL("popup-content.html");
 }
+
+async function getTopSites() {
+  let result;
+  await chrome.topSites.get(function callback(res) {
+    result = res;
+  });
+
+  return result;
+}
+
+render(<Main getTopSites={getUrl} />, document.body);
